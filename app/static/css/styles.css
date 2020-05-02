@@ -7,3 +7,17 @@ body {
     padding: 10px 20px;
     margin-bottom: 20px;
 }
+
+#flash {
+    /* position: fixed;
+    bottom: 15vw;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%, 0); */
+    font-size: 1.5em;
+    text-align: center;
+}
+/*
+.main-contents{
+    margin-top: 18em;
+} */

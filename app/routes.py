@@ -37,8 +37,9 @@ def login():
             user_obj = User(user['username'], user['email'],
                             user['_id'], user['is_admin'])
             login_user(user_obj, remember=form.remember.data)
+            next_page = request.args.get('next')
             flash('You have logged in!', 'info')
-            return redirect('account')
+            return redirect(next_page) if next_page else redirect('index')
         else:
             flash('Please check your credentials', 'warning')
     return render_template('login.html', title='Login', form=form)
@@ -63,4 +64,5 @@ def register():
 @login_required
 def logout():
     logout_user()
+    flash('So sad to see you go!', 'primary')
     return redirect(url_for('index'))
