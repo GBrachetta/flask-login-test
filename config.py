@@ -1,7 +1,7 @@
 import os
-from os import path
-if path.exists("env.py"):
-    import env
+# from os import path
+# if path.exists("env.py"):
+#     import env
 
 
 class Config(object):
